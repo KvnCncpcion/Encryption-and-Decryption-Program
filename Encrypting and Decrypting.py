@@ -16,3 +16,14 @@ def encode(key, msg):
         encrypt.append(list_enc)
 
     return base64.urlsafe_b64encode("".join(encrypt).encode()).decode()
+
+# Defining Decode for Decryption
+def decode(key, code):
+    decrypt = []
+    enc = base64.urlsafe_b64decode(code).decode()
+    for i in range(len(enc)):
+        list_key = key[i % len(key)]
+        list_dec = chr((256 + ord(enc[i]) - ord(list_key)) % 256)
+        decrypt.append(list_dec)
+
+    return "".join(decrypt)
