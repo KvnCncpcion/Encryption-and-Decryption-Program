@@ -113,3 +113,5 @@ quit_button["font"] = font.Font(size=12)
 quit_button.place(x=345, y=400)
 
 window.mainloop()
+
+# https://projectgurukul.org/python-message-encryption-decryption-project/#:~:text=Python%20Message%20Encryption%20Decryption%20Project%20File%20Structure%201,7.%20Adding%20the%20buttons%20and%20their%20functions%20
