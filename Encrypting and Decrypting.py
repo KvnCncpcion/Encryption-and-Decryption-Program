@@ -31,7 +31,7 @@ def decode(key, code):
 # Adding Code for window
 wn = Tk()
 wn.geometry("500x500")
-wn.configure(bg='azure2')
+wn.configure(bg="azure2")
 wn.title("Encrypt and Decrypt your Messages with ProjectGurukul")
 
 # Adding Variables for Message, Key, Mode and Input
@@ -49,9 +49,13 @@ headingLabel = Label(headingFrame1, text=" Welcome to Encryption and \nDecryptio
 headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
 
 # Adding Instructions for the user to Enter the Message
-label1 = Label(wn, text='Enter the Message', font=('Courier',10))
+label1 = Label(wn, text="Enter the Message", font=("Courier",10))
 label1.place(x=10,y=150)
 
 # Adding the dedicated space for the text inputted by the user
-msg = Entry(wn,textvariable=Message, width=35, font=('calibre',10,'normal'))
+msg = Entry(wn,textvariable=Message, width=35, font=("calibre",10,"normal"))
 msg.place(x=200,y=150)
+
+# Adding Instructions for the user to Enter the Key
+label2 = Label(wn, text="Enter the key", font=("Courier",10))
+label2.place(x=10,y=200)
