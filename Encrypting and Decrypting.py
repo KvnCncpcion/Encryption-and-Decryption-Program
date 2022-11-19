@@ -52,3 +52,6 @@ headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
 label1 = Label(wn, text='Enter the Message', font=('Courier',10))
 label1.place(x=10,y=150)
 
+# Adding the dedicated space for the text inputted by the user
+msg = Entry(wn,textvariable=Message, width=35, font=('calibre',10,'normal'))
+msg.place(x=200,y=150)
