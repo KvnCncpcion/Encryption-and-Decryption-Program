@@ -33,3 +33,9 @@ wn = Tk()
 wn.geometry("500x500")
 wn.configure(bg='azure2')
 wn.title("Encrypt and Decrypt your Messages with ProjectGurukul")
+
+# Adding Variables for Message, Key, Mode and Input
+Message = StringVar()
+key = StringVar()
+mode = IntVar()
+Output = StringVar()
