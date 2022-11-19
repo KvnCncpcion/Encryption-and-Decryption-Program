@@ -75,3 +75,8 @@ Radiobutton(window, text="Decrypt", variable=mode, value=2).place(x=200,y=300)
 # Adding the label for result
 result_label = Label(window, text="Result", font=("Courier", 10))
 result_label.place(x=10, y=350)
+
+# Adding the dedicated space for the result
+result_space = Entry(window, textvariable=output, width=35, font=("calibre", 10, "normal"))
+result_space.place(x=200, y=350)
+
