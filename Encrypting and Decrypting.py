@@ -45,21 +45,25 @@ heading_frame = Frame(window, bg ="gray91", bd = 5)
 heading_frame.place(relx = 0.2, rely = 0.1, relwidth = 0.7, relheight = 0.16)
 
 # Adding Heading Label for the Heading Frame
-heading_label = Label(heading_frame, text=" Welcome to Encryption and \nDecryption with ProjectGurukul", fg='grey19', font=('Courier', 15, 'bold'))
+heading_label = Label(heading_frame, text="Welcome to Encryption and \nDecryption with ProjectGurukul", fg='grey19', font=('Courier', 15, 'bold'))
 heading_label.place(relx=0, rely=0, relwidth=1, relheight=1)
 
 # Adding Instructions for the user to Enter the Message
-label1 = Label(window, text="Enter the Message", font=("Courier", 10))
-label1.place(x=10,y=150)
+text_instruction = Label(window, text="Enter the Message", font=("Courier", 10))
+text_instruction.place(x=10, y=150)
 
 # Adding the dedicated space for the text inputted by the user
-msg = Entry(window, textvariable=message, width=35, font=("calibre", 10, "normal"))
-msg.place(x=200,y=150)
+txt_msg = Entry(window, textvariable=message, width=35, font=("calibre", 10, "normal"))
+txt_msg.place(x=200, y=150)
 
 # Adding Instructions for the user to Enter the Key
-label2 = Label(window, text="Enter the key", font=("Courier", 10))
-label2.place(x=10,y=200)
+passkey_instruction = Label(window, text="Enter the key", font=("Courier", 10))
+passkey_instruction.place(x=10, y=200)
 
 # Adding the dedicated space for the passkey inputted by the user
-InpKey = Entry(window, textvariable=pass_key, width=35, font=("calibre", 10, "normal"))
-InpKey.place(x=200,y=200)
+passkey_space = Entry(window, textvariable=pass_key, width=35, font=("calibre", 10, "normal"))
+passkey_space.place(x=200, y=200)
+
+# Adding the instructions for user to choose between encrypt and decrypt
+enc_dec_instructions = Label(window, text="Check one of encrypt or decrypt", font=("Courier", 10))
+enc_dec_instructions.place(x=10, y=250)
