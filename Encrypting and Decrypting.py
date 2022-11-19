@@ -29,89 +29,89 @@ def decode(key, code):
     return "".join(decrypt)
 
 # Adding Code for window
-window = Tk()
-window.geometry("500x500")
-window.configure(bg="azure2")
-window.title("Encrypt and Decrypt your Messages with ProjectGurukul")
+wn = Tk()
+wn.geometry("500x500")
+wn.configure(bg='azure2')
+wn.title("Encrypt and Decrypt your Messages with ProjectGurukul")
 
 # Adding Variables for Message, Key, Mode and Input
-message = StringVar()
-pass_key = StringVar()
+Message = StringVar()
+key = StringVar()
 mode = IntVar()
-output = StringVar()
+Output = StringVar()
 
 # Adding Heading Frame for the Window
-heading_frame = Frame(window, bg ="gray91", bd = 5)
-heading_frame.place(relx = 0.2, rely = 0.1, relwidth = 0.7, relheight = 0.16)
+headingFrame1 = Frame(wn,bg="gray91",bd=5)
+headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.7,relheight=0.16)
 
 # Adding Heading Label for the Heading Frame
-heading_label = Label(heading_frame, text="Welcome to Encryption and \nDecryption with ProjectGurukul", fg="grey19", font=("Courier", 15, "bold"))
-heading_label.place(relx=0, rely=0, relwidth=1, relheight=1)
+headingLabel = Label(headingFrame1, text=" Welcome to Encryption and \nDecryption with ProjectGurukul", fg='grey19', font=('Courier',15,'bold'))
+headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
 
 # Adding Instructions for the user to Enter the Message
-text_instruction = Label(window, text="Enter the Message", font=("Courier", 10))
-text_instruction.place(x=10, y=150)
+label1 = Label(wn, text='Enter the Message', font=('Courier',10))
+label1.place(x=10,y=150)
 
 # Adding the dedicated space for the text inputted by the user
-txt_msg = Entry(window, textvariable=message, width=35, font=("calibre", 10, "normal"))
-txt_msg.place(x=200, y=150)
+msg = Entry(wn,textvariable=Message, width=35, font=('calibre',10,'normal'))
+msg.place(x=200,y=150)
 
 # Adding Instructions for the user to Enter the Key
-passkey_instruction = Label(window, text="Enter the key", font=("Courier", 10))
-passkey_instruction.place(x=10, y=200)
+label2 = Label(wn, text='Enter the key', font=('Courier',10))
+label2.place(x=10,y=200)
 
 # Adding the dedicated space for the passkey inputted by the user
-passkey_space = Entry(window, textvariable=pass_key, width=35, font=("calibre", 10, "normal"))
-passkey_space.place(x=200, y=200)
+InpKey = Entry(wn, textvariable=key, width=35,font=('calibre',10,'normal'))
+InpKey.place(x=200,y=200)
 
 # Adding the instructions for user to choose between encrypt and decrypt
-enc_dec_instructions = Label(window, text="Check one of encrypt or decrypt", font=("Courier", 10))
-enc_dec_instructions.place(x=10, y=250)
+label3 = Label(wn, text='Check one of encrypt or decrypt', font=('Courier',10))
+label3.place(x=10,y=250)
 
 # Adding the buttons for Encryption and Decryption
-Radiobutton(window, text="Encrypt", variable=mode, value=1).place(x=100,y=300)
-Radiobutton(window, text="Decrypt", variable=mode, value=2).place(x=200,y=300)
+Radiobutton(wn, text='Encrypt', variable=mode, value=1).place(x=100,y=300)
+Radiobutton(wn, text='Decrypt', variable=mode, value=2).place(x=200,y=300)
 
 # Adding the label for result
-result_label = Label(window, text="Result", font=("Courier", 10))
-result_label.place(x=10, y=350)
+label3 = Label(wn, text='Result', font=('Courier',10))
+label3.place(x=10,y=350)
 
 # Adding the dedicated space for the result
-result_space = Entry(window, textvariable=output, width=35, font=("calibre", 10, "normal"))
-result_space.place(x=200, y=350)
+res = Entry(wn,textvariable=Output, width=35, font=('calibre',10,'normal'))
+res.place(x=200,y=350)
 
 # Defining the result function
-def result():
-    msg_result = message.get()
-    k = pass_key.get()
+def Result():
+    msg = Message.get()
+    k= key.get()
     i = mode.get()
     if (i==1):
-        output.set(encode(k, msg_result))
+        Output.set(encode(k, msg))
     elif(i==2):
-        output.set(decode(k, msg_result))
+        Output.set(decode(k, msg))
     else:
-        messagebox.showinfo("ProjectGurukul", "Please Choose one of Encryption or Decryption. Try again.")
+        messagebox.showinfo('ProjectGurukul', 'Please Choose one of Encryption or Decryption. Try again.')
 
 # Defining the reset function
-def reset():
-    message.set("")
-    pass_key.set("")
+def Reset():
+    Message.set("")
+    key.set("")
     mode.set(0)
-    output.set("")
+    Output.set("")
 
 # Adding interactable buttons for show, reset and quit
-show_button = Button(window, text="Show Message", bg="lavender blush2", fg="black", width=15, height=1, command=result)
-show_button["font"] = font.Font(size=12)
-show_button.place(x=180, y=400)
+ShowBtn = Button(wn,text="Show Message",bg='lavender blush2', fg='black',width=15,height=1,command=Result)
+ShowBtn['font'] = font.Font( size=12)
+ShowBtn.place(x=180,y=400)
 
-reset_button = Button(window, text="Reset", bg="honeydew2", fg="black", width=15, height=1, command=reset)
-reset_button["font"] = font.Font(size=12)
-reset_button.place(x=15, y=400)
+ResetBtn = Button(wn, text='Reset', bg='honeydew2', fg='black', width=15,height=1,command=Reset)
+ResetBtn['font'] = font.Font( size=12)
+ResetBtn.place(x=15,y=400)
 
-quit_button = Button(window, text="Exit", bg="old lace", fg="black", width=15, height=1, command=window.destroy)
-quit_button["font"] = font.Font(size=12)
-quit_button.place(x=345, y=400)
+QuitBtn = Button(wn, text='Exit', bg='old lace', fg='black',width=15,height=1, command=wn.destroy)
+QuitBtn['font'] = font.Font( size=12)
+QuitBtn.place(x=345,y=400)
 
-window.mainloop()
+wn.mainloop()
 
 # https://projectgurukul.org/python-message-encryption-decryption-project/#:~:text=Python%20Message%20Encryption%20Decryption%20Project%20File%20Structure%201,7.%20Adding%20the%20buttons%20and%20their%20functions%20
