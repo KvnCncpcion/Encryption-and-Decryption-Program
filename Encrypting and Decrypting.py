@@ -39,3 +39,7 @@ Message = StringVar()
 key = StringVar()
 mode = IntVar()
 Output = StringVar()
+
+# Adding Heading Frame for the Window
+headingFrame1 = Frame(wn,bg="gray91",bd=5)
+headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.7,relheight=0.16)
