@@ -67,3 +67,7 @@ passkey_space.place(x=200, y=200)
 # Adding the instructions for user to choose between encrypt and decrypt
 enc_dec_instructions = Label(window, text="Check one of encrypt or decrypt", font=("Courier", 10))
 enc_dec_instructions.place(x=10, y=250)
+
+# Adding the buttons for Encryption and Decryption
+Radiobutton(window, text="Encrypt", variable=mode, value=1).place(x=100,y=300)
+Radiobutton(window, text="Decrypt", variable=mode, value=2).place(x=200,y=300)
