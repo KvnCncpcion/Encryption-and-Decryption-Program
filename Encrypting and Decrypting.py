@@ -27,3 +27,9 @@ def decode(key, code):
         decrypt.append(list_dec)
 
     return "".join(decrypt)
+
+# Adding Code for window
+wn = Tk()
+wn.geometry("500x500")
+wn.configure(bg='azure2')
+wn.title("Encrypt and Decrypt your Messages with ProjectGurukul")
