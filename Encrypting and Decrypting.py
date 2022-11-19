@@ -71,3 +71,7 @@ enc_dec_instructions.place(x=10, y=250)
 # Adding the buttons for Encryption and Decryption
 Radiobutton(window, text="Encrypt", variable=mode, value=1).place(x=100,y=300)
 Radiobutton(window, text="Decrypt", variable=mode, value=2).place(x=200,y=300)
+
+# Adding the label for result
+result_label = Label(window, text="Result", font=("Courier", 10))
+result_label.place(x=10, y=350)
