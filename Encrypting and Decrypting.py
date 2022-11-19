@@ -80,3 +80,15 @@ result_label.place(x=10, y=350)
 result_space = Entry(window, textvariable=output, width=35, font=("calibre", 10, "normal"))
 result_space.place(x=200, y=350)
 
+# Defining the result
+def result():
+    txt_msg = message.get()
+    k = pass_key.get()
+    i = mode.get()
+    if (i==1):
+        output.set(encode(k, txt_msg))
+    elif(i==2):
+        output.set(decode(k, txt_msg))
+    else:
+        messagebox.showinfo("ProjectGurukul", "Please Choose one of Encryption or Decryption. Try again.")
+
