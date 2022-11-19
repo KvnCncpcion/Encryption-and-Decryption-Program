@@ -45,7 +45,7 @@ heading_frame = Frame(window, bg ="gray91", bd = 5)
 heading_frame.place(relx = 0.2, rely = 0.1, relwidth = 0.7, relheight = 0.16)
 
 # Adding Heading Label for the Heading Frame
-heading_label = Label(heading_frame, text="Welcome to Encryption and \nDecryption with ProjectGurukul", fg='grey19', font=('Courier', 15, 'bold'))
+heading_label = Label(heading_frame, text="Welcome to Encryption and \nDecryption with ProjectGurukul", fg="grey19", font=("Courier", 15, "bold"))
 heading_label.place(relx=0, rely=0, relwidth=1, relheight=1)
 
 # Adding Instructions for the user to Enter the Message
