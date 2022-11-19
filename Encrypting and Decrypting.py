@@ -43,3 +43,7 @@ Output = StringVar()
 # Adding Heading Frame for the Window
 headingFrame1 = Frame(wn,bg="gray91",bd=5)
 headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.7,relheight=0.16)
+
+# Adding Heading Label for the Heading Frame
+headingLabel = Label(headingFrame1, text=" Welcome to Encryption and \nDecryption with ProjectGurukul", fg='grey19', font=('Courier',15,'bold'))
+headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
