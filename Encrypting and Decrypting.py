@@ -82,13 +82,13 @@ result_space.place(x=200, y=350)
 
 # Defining the result function
 def result():
-    txt_msg = message.get()
+    msg_result = message.get()
     k = pass_key.get()
     i = mode.get()
     if (i==1):
-        output.set(encode(k, txt_msg))
+        output.set(encode(k, msg_result))
     elif(i==2):
-        output.set(decode(k, txt_msg))
+        output.set(decode(k, msg_result))
     else:
         messagebox.showinfo("ProjectGurukul", "Please Choose one of Encryption or Decryption. Try again.")
 
@@ -99,3 +99,17 @@ def reset():
     mode.set(0)
     output.set("")
 
+# Adding interactable buttons for show, reset and quit
+show_button = Button(window, text="Show Message", bg="lavender blush2", fg="black", width=15, height=1, command=result)
+show_button["font"] = font.Font(size=12)
+show_button.place(x=180, y=400)
+
+reset_button = Button(window, text="Reset", bg="honeydew2", fg="black", width=15, height=1, command=reset)
+reset_button["font"] = font.Font(size=12)
+reset_button.place(x=15, y=400)
+
+quit_button = Button(window, text="Exit", bg="old lace", fg="black", width=15, height=1, command=window.destroy)
+quit_button["font"] = font.Font(size=12)
+quit_button.place(x=345, y=400)
+
+window.mainloop()
